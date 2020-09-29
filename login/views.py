@@ -4,6 +4,7 @@ from .models import LoginUser
 from django.contrib.auth.hashers import make_password, check_password
 from .serializer import LoginUserSerializer
 
+
 class AppLogin(APIView):
     def post(self, request):
         user_id = request.data.get('user_id', "")
