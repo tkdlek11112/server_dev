@@ -46,14 +46,13 @@ class TaskCreate(APIView):
 class TaskSelect(APIView):
     def post(self, request):
         user_id = request.data.get('user_id', "")
-
         tasks = Task.objects.filter(user_id=user_id)
+
         task_list = []
         for task in tasks:
-            task_list.append(dict(name=task.name, start_date=task.start_date, end_date=task.end_date, state=task.state))
+            task_list.append(dict(id=task.id, name=task.name, done=task.done))
 
         return Response(dict(tasks=task_list))
-
 
 
 
