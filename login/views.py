@@ -23,6 +23,10 @@ class AppLogin(APIView):
 class RegistUser(APIView):
     def post(self, request):
         serializer = LoginUserSerializer(request.data)
+        if serializer.data['user_id'] == '':
+            return Response(dict(
+                msg="회원가입 완료",
+            ), status=400)
 
         if LoginUser.objects.filter(user_id=serializer.data['user_id']).exists():
             # DB에 있는 값 출력할 때 어떻게 나오는지 보려고 user 객체에 담음
@@ -36,4 +40,8 @@ class RegistUser(APIView):
 
         user = serializer.create(request.data)
 
-        return Response(data=LoginUserSerializer(user).data)
+        return Response(dict(
+                msg="회원가입 완료",
+                user_id=user.user_id,
+                user_pw=user.user_pw
+            ))
