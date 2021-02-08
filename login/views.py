@@ -14,8 +14,9 @@ class AppLogin(APIView):
         if user is None:
             return Response(dict(msg="해당 ID의 사용자가 없습니다."))
         if check_password(user_pw, user.user_pw):
-            return Response(dict(msg="로그인 성공", user_id=user.user_id, birth_day=user.birth_day,
-                                 gender=user.gender, email=user.email, name=user.name, age=user.age))
+            # return Response(dict(msg="로그인 성공", user_id=user.user_id, birth_day=user.birth_day,
+            #                      gender=user.gender, email=user.email, name=user.name, age=user.age))
+            return Response(dict(msg="로그인 성공", user_id=user.user_id))
         else:
             return Response(dict(msg="로그인 실패. 패스워드 불일치"))
 
@@ -33,8 +34,7 @@ class RegistUser(APIView):
             user = LoginUser.objects.filter(user_id=serializer.data['user_id']).first()
             data = dict(
                 msg="이미 존재하는 아이디입니다.",
-                user_id=user.user_id,
-                user_pw=user.user_pw
+                user_id=user.user_id
             )
             return Response(data)
 
@@ -42,6 +42,5 @@ class RegistUser(APIView):
 
         return Response(dict(
                 msg="회원가입 완료",
-                user_id=user.user_id,
-                user_pw=user.user_pw
+                user_id=user.user_id
             ))
