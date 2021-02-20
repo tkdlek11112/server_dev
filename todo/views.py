@@ -6,6 +6,11 @@ from django.shortcuts import render
 
 
 # Create your views here.
+class Test(APIView):
+    def post(self, request):
+        return Response(status=400)
+
+
 class Todo(APIView):
     def post(self, request):
         user_id = request.data.get('user_id', "")
@@ -36,12 +41,10 @@ class TaskCreate(APIView):
         user_id = request.data.get('user_id', "")
         todo_id = request.data.get('todo_id', "")
         name = request.data.get('name', "")
-        end_date = request.data.get('end_date', None)
-        if end_date:
-            end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
-        task = Task.objects.create(id=todo_id, user_id=user_id, name=name, end_date=end_date)
 
-        return Response(dict(msg="To-Do 생성 완료", name=task.name, start_date=task.start_date.strftime('%Y-%m-%d'), end_date=task.end_date))
+        Task.objects.create(id=todo_id, user_id=user_id, name=name)
+
+        return Response()
 
 
 class TaskSelect(APIView):
@@ -61,20 +64,18 @@ class TaskSelect(APIView):
 
 class TaskToggle(APIView):
     def post(self, request):
-        print(request.data)
         todo_id = request.data.get('todo_id', "")
-        #
         task = Task.objects.get(id=todo_id)
         task.done = False if task.done else True
         task.save()
-        return Response(status=200)
-        # return Response(status=200)
+        return Response()
 
 
 class TaskDelete(APIView):
     def post(self, request):
         todo_id = request.data.get('todo_id', "")
-        task = Task.objects.filter(id=todo_id).first()
-        task.delete()
+        task = Task.objects.get(id=todo_id)
+        if task:
+            task.delete()
 
-        return Response(dict(msg="To-Do 삭제완료"))
+        return Response()
