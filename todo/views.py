@@ -5,6 +5,50 @@ from datetime import datetime
 from django.shortcuts import render
 
 
+class TaskSelect(APIView):
+    def post(self, request):
+        tasks = Task.objects.all()
+        task_list = []
+        for task in tasks:
+            task_list.append(dict(id=task.id,
+                                  name=task.name,
+                                  done=task.done))
+
+        return Response(status=200, data=dict(tasks=task_list))
+
+
+class TaskCreate(APIView):
+    def post(self, request):
+        user_id = request.data.get('user_id', '')
+        todo_id = request.data.get('todo_id', '')
+        name = request.data.get('name', '')
+
+        Task.objects.create(id=todo_id, user_id=user_id, name=name)
+
+        return Response()
+
+
+class TaskToggle(APIView):
+    def post(self, request):
+        todo_id = request.data.get('todo_id', '')
+        task = Task.objects.get(id=todo_id)
+        if task:
+            task.done = False if task.done is True else True
+            task.save()
+
+        return Response()
+
+
+class TaskDelete(APIView):
+    def post(self, request):
+        todo_id = request.data.get('todo_id', '')
+        task = Task.objects.get(id=todo_id)
+        if task:
+            task.delete()
+
+        return Response()
+
+
 # Create your views here.
 class Test(APIView):
     def post(self, request):
@@ -35,47 +79,3 @@ class Todo(APIView):
         context=dict(task_list=task_list)
         return render(request, 'todo/todo.html', context=context)
 
-
-class TaskCreate(APIView):
-    def post(self, request):
-        user_id = request.data.get('user_id', "")
-        todo_id = request.data.get('todo_id', "")
-        name = request.data.get('name', "")
-
-        Task.objects.create(id=todo_id, user_id=user_id, name=name)
-
-        return Response()
-
-
-class TaskSelect(APIView):
-    def post(self, request):
-        user_id = request.data.get('user_id', "")
-        print(user_id)
-        tasks = Task.objects.filter()
-
-        task_list = []
-        for task in tasks:
-            task_list.append(dict(id=task.id,
-                                  name=task.name,
-                                  done=task.done))
-
-        return Response(dict(tasks=task_list))
-
-
-class TaskToggle(APIView):
-    def post(self, request):
-        todo_id = request.data.get('todo_id', "")
-        task = Task.objects.get(id=todo_id)
-        task.done = False if task.done else True
-        task.save()
-        return Response()
-
-
-class TaskDelete(APIView):
-    def post(self, request):
-        todo_id = request.data.get('todo_id', "")
-        task = Task.objects.get(id=todo_id)
-        if task:
-            task.delete()
-
-        return Response()
