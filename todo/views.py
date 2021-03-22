@@ -38,28 +38,56 @@ class Todo(APIView):
 
 class TaskCreate(APIView):
     def post(self, request):
-        user_id = request.data.get('user_id', "")
-        todo_id = request.data.get('todo_id', "")
-        name = request.data.get('name', "")
+        user_id = request.data.get('user_id', None)
+        todo_id = request.data.get('todo_id', None)
+        name = request.data.get('name', None)
 
-        Task.objects.create(id=todo_id, user_id=user_id, name=name)
+        # 이전버전 호환을 위해 todo_id가 들어오고 안들어오고로 분기
+        if todo_id:
+            task = Task.objects.create(id=todo_id, user_id=user_id, name=name)
+        else:
+            task = Task.objects.create(user_id=user_id, name=name)
 
-        return Response()
+        return Response(data=dict(id=task.id))
 
 
 class TaskSelect(APIView):
     def post(self, request):
-        user_id = request.data.get('user_id', "")
-        print(user_id)
-        tasks = Task.objects.filter()
+        user_id = request.data.get('user_id', None)
+        page_number = request.data.get('page_number', None)
+
+        # print("user_id = ", user_id, ", page_number = ", page_number)
+        is_last_page = True
+
+        # user_id를 올리는 경우
+        if user_id and not "":
+            tasks = Task.objects.filter(user_id=user_id)
+        else:
+            tasks = Task.objects.all()
+
+        if page_number is not None and page_number >= 0:
+            # print('총 todo 수 : ', tasks.count())
+            if tasks.count() <= 10:
+                pass
+            elif tasks.count() <= (1 + page_number) * 10:
+                tasks = tasks[page_number * 10:]
+            else:
+                tasks = tasks[page_number * 10: (1 + page_number) * 10]
+                is_last_page = False
+
+        # page_number가 없는경우.. 이전 버전 api이거나 실수로 못올렸거나
+        # 그냥 0으로 생각하고 응답줄지 아니면 에러 응답할지 선택해야함.
+        else:
+            pass
 
         task_list = []
         for task in tasks:
             task_list.append(dict(id=task.id,
+                                  userId=task.user_id,
                                   name=task.name,
                                   done=task.done))
 
-        return Response(dict(tasks=task_list))
+        return Response(dict(tasks=task_list, is_last_page=is_last_page))
 
 
 class TaskToggle(APIView):
