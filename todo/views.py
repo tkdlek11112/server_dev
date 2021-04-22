@@ -14,35 +14,9 @@ class Test(TodoView):
         return CommonResponse(0, "success", dict(some_data="some_value"))
 
 
-class Todo(APIView):
-    def post(self, request):
-        user_id = request.data.get('user_id', "")
-        name = request.data.get('name', "")
-        end_date = request.data.get('end_date', None)
-        if end_date:
-            end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
-        Task.objects.create(user_id=user_id, name=name, end_date=end_date)
-
-        tasks = Task.objects.all()
-        task_list = []
-        for task in tasks:
-            task_list.append(dict(name=task.name, start_date=task.start_date, end_date=task.end_date, state=task.state))
-        context = dict(task_list=task_list)
-        return render(request, 'todo/todo.html', context=context)
-
-    def get(self, request):
-        tasks = Task.objects.all()
-        task_list = []
-        for task in tasks:
-            task_list.append(dict(name=task.name, start_date=task.start_date, end_date=task.end_date, state=task.state))
-        context=dict(task_list=task_list)
-        return render(request, 'todo/todo.html', context=context)
-
-
 class TaskCreate(TodoView):
     def post(self, request):
         # 이전버전 호환을 위해 헤더먼저 검사하고 body로 내려감.
-
         print('헤더 id', self.user_id,'헤더 version', self.version)
         if self.user_id:
             user_id = self.user_id
