@@ -8,5 +8,4 @@ urlpatterns = [
     url('select', views.TaskSelect.as_view(), name='select'),
     url('toggle', views.TaskToggle.as_view(), name='toggle'),
     url('test', views.Test.as_view(), name='test'),
-    url('', views.Todo.as_view(), name='todo')
 ]
