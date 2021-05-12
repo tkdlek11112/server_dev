@@ -1,7 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-
 class TodoView(APIView):
     # APIView를 상속받은 TodoView
     user_id = ''
