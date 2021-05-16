@@ -1,17 +1,37 @@
-from rest_framework.views import APIView
-
 from .models import Task
 from rest_framework.response import Response
-from datetime import datetime
-from django.shortcuts import render
 from common.common import TodoView, CommonResponse, SuccessResponse, SuccessResponseWithData, ErrorResponse
+import logging
+
+logger = logging.getLogger('django')
 
 
 # Create your views here.
 class Test(TodoView):
     def post(self, request):
         print(self.user_id)
-        return CommonResponse(0, "success", dict(some_data="some_value"))
+        input_value1 = request.data.get('input_value1', None)
+        input_value2 = request.data.get('input_value2', None)
+        input_value3 = request.data.get('input_value3', None)
+        logger.error("INPUT HEADER " + self.user_id)
+        logger.error("INPUT BODY input_value1 " + input_value1)
+        logger.error("INPUT BODY input_value2 " + input_value2)
+        logger.error("INPUT BODY input_value3 " + input_value3)
+
+
+        output_value1 = input_value1 + "output"
+        output_value2 = input_value2 + "output"
+        output_value3 = input_value3 + "output"
+
+        data = dict(output_value1=output_value1,
+                    output_value2=output_value2,
+                    output_value3=output_value3)
+
+        logger.error("OUTPUT BODY output_value1 " + output_value1)
+        logger.error("OUTPUT BODY output_value2 " + output_value2)
+        logger.error("OUTPUT BODY output_value3 " + output_value3)
+
+        return CommonResponse(0, "success", data)
 
 
 class TaskCreate(TodoView):
