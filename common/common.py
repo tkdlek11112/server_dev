@@ -35,11 +35,8 @@ def SuccessResponse():
 
 def SuccessResponseWithData(data):
     return Response(status=200,
-                    data=dict(
-                        result_code=0,
-                        result_msg="success",
-                        data=data
-                    ))
+                    data=data
+                    )
 
 
 def ErrorResponse():
