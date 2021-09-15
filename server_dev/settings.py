@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ts5zvye^bxn8jnry3c!1amy4-xwcr@^4j1vba!s9@b(2ne@1&5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -72,7 +72,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'login',
     'todo',
-    'common'
+    'common',
+    'drf_yasg'
 ]
 
 

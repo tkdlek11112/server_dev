@@ -2,6 +2,10 @@ from .models import Task
 from rest_framework.response import Response
 from common.common import TodoView, CommonResponse, SuccessResponse, SuccessResponseWithData, ErrorResponse
 import logging
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
+from rest_framework import serializers
+
 
 logger = logging.getLogger('django')
 
@@ -34,7 +38,44 @@ class Test(TodoView):
         return CommonResponse(0, "success", data)
 
 
+class TodoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = ['user_id', 'name']
+
+
 class TaskCreate(TodoView):
+    '''
+        여기에 주석으로 뭔가 쓰면 swagger에 반영됩니다.
+        ---
+        # TO-DO를 생성할 때 사용하는 API
+            - user_id : 사용자 ID
+            - name : To-Do 이름
+    '''
+
+    id_field = openapi.Schema(
+        'id',
+        description='To-Do가 생성되면 자동으로 채번되는 ID값',
+        type=openapi.TYPE_STRING
+    )
+
+    success_response = openapi.Schema(
+        title='response',
+        type=openapi.TYPE_OBJECT,
+        properties={
+            'id': id_field
+        }
+    )
+
+    @swagger_auto_schema(tags=["TO-DO 생성"],
+                         request_body=TodoSerializer,
+                         query_serializer=TodoSerializer,
+                         responses={
+                             200: success_response,
+                             403: '인증에러',
+                             400: '입력값 유효성 검증 실패',
+                             500: '서버에러'
+                         })
     def post(self, request):
         # 이전버전 호환을 위해 헤더먼저 검사하고 body로 내려감.
         print('헤더 id', self.user_id,'헤더 version', self.version)

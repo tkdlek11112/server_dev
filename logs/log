@@ -1973,3 +1973,498 @@ ERROR 2021-05-16 22:50:15,664 C:\Users\tkdle\PycharmProjects\server_dev\todo\vie
 ERROR 2021-05-16 22:50:15,664 C:\Users\tkdle\PycharmProjects\server_dev\todo\views.py 30 OUTPUT BODY output_value1 first input valueoutput
 ERROR 2021-05-16 22:50:15,664 C:\Users\tkdle\PycharmProjects\server_dev\todo\views.py 31 OUTPUT BODY output_value2 second input valueoutput
 ERROR 2021-05-16 22:50:15,664 C:\Users\tkdle\PycharmProjects\server_dev\todo\views.py 32 OUTPUT BODY output_value3 third input valueoutput
+ERROR 2021-09-15 23:41:05,594 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:41:05,599 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 145
+ERROR 2021-09-15 23:41:54,074 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:41:54,078 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 145
+ERROR 2021-09-15 23:42:32,935 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:42:32,938 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100739
+ERROR 2021-09-15 23:43:35,129 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:43:35,132 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100876
+ERROR 2021-09-15 23:43:35,913 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:43:35,914 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100876
+ERROR 2021-09-15 23:44:54,361 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:44:54,365 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:44:57,174 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:44:57,176 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:25,657 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:25,660 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:26,621 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:26,622 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:27,212 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:27,213 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:27,428 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:27,429 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:27,603 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:27,604 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:27,794 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:27,795 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:45:27,980 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+ERROR 2021-09-15 23:45:27,981 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger HTTP/1.1" 500 100960
+ERROR 2021-09-15 23:51:24,708 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /todo/test
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\tkdle\PycharmProjects\server_dev\common\common.py", line 15, in dispatch
+    return super(TodoView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\tkdle\PycharmProjects\server_dev\todo\views.py", line 17, in post
+    logger.error("INPUT HEADER " + self.user_id)
+TypeError: can only concatenate str (not "bool") to str
+ERROR 2021-09-15 23:51:24,711 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "POST /todo/test HTTP/1.1" 500 19745
+ERROR 2021-09-16 00:00:07,934 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\generators.py", line 246, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\generators.py", line 404, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\generators.py", line 446, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\view.py", line 32, in get_operation
+    body = self.get_request_body_parameters(consumes)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\view.py", line 85, in get_request_body_parameters
+    schema = self.get_request_body_schema(serializer)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\view.py", line 142, in get_request_body_schema
+    return self.serializer_to_schema(serializer)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 438, in serializer_to_schema
+    self.field_inspectors, 'get_schema', serializer, {'field_inspectors': self.field_inspectors}
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 230, in probe_field_inspectors
+    swagger_object_type=swagger_object_type, use_references=use_references, **kwargs
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\field.py", line 124, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\openapi.py", line 688, in setdefault
+    ret = maker()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\field.py", line 93, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 1038, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 1139, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'asdf' was declared on serializer TodoSerializer, but has not been included in the 'fields' option.
+ERROR 2021-09-16 00:00:07,941 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger?format=openapi HTTP/1.1" 500 22801
+ERROR 2021-09-16 00:02:12,525 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /swagger
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\views.py", line 94, in get
+    schema = generator.get_schema(request, self.public)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\generators.py", line 246, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\generators.py", line 404, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\generators.py", line 446, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\view.py", line 32, in get_operation
+    body = self.get_request_body_parameters(consumes)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\view.py", line 85, in get_request_body_parameters
+    schema = self.get_request_body_schema(serializer)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\view.py", line 142, in get_request_body_schema
+    return self.serializer_to_schema(serializer)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 438, in serializer_to_schema
+    self.field_inspectors, 'get_schema', serializer, {'field_inspectors': self.field_inspectors}
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\field.py", line 33, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 230, in probe_field_inspectors
+    swagger_object_type=swagger_object_type, use_references=use_references, **kwargs
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\field.py", line 124, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\openapi.py", line 688, in setdefault
+    ret = maker()
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\drf_yasg\inspectors\field.py", line 93, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 1063, in get_fields
+    source, info, model, depth
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 1208, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\serializers.py", line 1325, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `created_at` is not valid for model `Task`.
+ERROR 2021-09-16 00:02:12,529 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "GET /swagger?format=openapi HTTP/1.1" 500 22841
+ERROR 2021-09-16 00:16:33,205 C:\Users\tkdle\Miniconda3\lib\site-packages\django\utils\log.py 228 Internal Server Error: /todo/create
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: task.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\tkdle\PycharmProjects\server_dev\common\common.py", line 15, in dispatch
+    return super(TodoView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\tkdle\PycharmProjects\server_dev\todo\views.py", line 62, in post
+    task = Task.objects.create(user_id=user_id, name=name)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\query.py", line 433, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\base.py", line 746, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\base.py", line 784, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\base.py", line 887, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\base.py", line 926, in _do_insert
+    using=using, raw=raw,
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\query.py", line 1204, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1391, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\tkdle\Miniconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: task.user_id
+ERROR 2021-09-16 00:16:33,211 C:\Users\tkdle\Miniconda3\lib\site-packages\django\core\servers\basehttp.py 157 "POST /todo/create?user_id=SWAGGER&name=%EC%8A%A4%EC%9B%A8%EA%B1%B0%EB%A1%9C%20API%20%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%B4%EB%B3%B4%EA%B8%B0~ HTTP/1.1" 500 23034
